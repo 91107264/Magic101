@@ -20,9 +20,34 @@ public class Bard {
         return instrument;
     }
 
+    public void setMana (int mana) {
+        this.mana = mana;
+    }
 
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public int getMoney() {
+        return money;
+    }
 
     //4 Brain methods
+
+    public boolean canPlay(int mana, Bard user) {
+
+        if(mana >= 50) {
+            user.setInstrument("yes");
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     //5 toString
      @Override
@@ -31,4 +56,3 @@ public class Bard {
         return output;
     }
 }
-

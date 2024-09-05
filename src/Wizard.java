@@ -19,11 +19,23 @@ public class Wizard {
         return wand;
     }
 
+    public void setMana() { this.mana = mana; }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
     @Override
     public String toString() {
         String output= "wand: " + wand + "\nmoney: " + money + "\nmana: " + mana;
         return output;
     }
-
-
 }

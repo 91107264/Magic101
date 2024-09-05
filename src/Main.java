@@ -6,6 +6,9 @@ public class Main {
 
         Wizard jonjon = new Wizard("excal", 10, 100);
 
-        System.out.println(jonjon);
+        Orc JAWN = new Orc("long", 10, 100);
+
+        System.out.println(JAWN);
+        System.out.println(JAWN.getClub());
     }
 }
