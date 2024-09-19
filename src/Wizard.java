@@ -1,14 +1,23 @@
-public class Wizard {
+public class Wizard extends Humanoid {
     String wand;
 
     int money;
 
     int mana;
 
-    public Wizard(String wand, int money, int mana) {
+    Staff staff;
+
+    Wizard() {
+        super();
+        System.out.println("Created new Wizard.");
+    }
+
+    public Wizard(String name, int health, String wand, int money, int mana, Staff staff) {
+        super(name, health);
         this.wand = wand;
         this.money = money;
         this.mana = mana;
+        this.staff = staff;
     }
 
     public void setWand(String wand) {
@@ -18,6 +27,8 @@ public class Wizard {
     public String getWand() {
         return wand;
     }
+
+    public Staff getStaff(){ return staff;}
 
     public void setMana() { this.mana = mana; }
 
@@ -31,6 +42,19 @@ public class Wizard {
 
     public int getMoney() {
         return money;
+    }
+
+    public boolean canCast(int mana) {
+        boolean cast;
+
+        if(mana >= 50) {
+            cast = true;
+        }
+        else {
+            cast = false;
+        }
+
+        return cast;
     }
 
     @Override

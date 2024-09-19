@@ -1,11 +1,12 @@
-public class Orc {
+public class Orc extends Humanoid {
     String club;
 
     int money;
 
     int strength;
 
-    public Orc(String club, int money, int strength)  {
+    public Orc(String name, int health, String club, int money, int strength)  {
+        super(name, health);
         this.club = club;
         this.money = money;
         this.strength = strength;

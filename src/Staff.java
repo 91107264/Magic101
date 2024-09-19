@@ -46,6 +46,15 @@ public class Staff {
         return power;
     }
 
+    public static void bigBrain(Staff staff) {
+        if(staff.max >= 150) {
+            System.out.println("He is big brain!");
+        }
+        else {
+            System.out.println("He is not big brain :(");
+        }
+    }
+
     @Override
     public String toString() {
         return "Staff{" +

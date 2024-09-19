@@ -1,11 +1,12 @@
-public class Bard {
+public class Bard extends Humanoid {
     //1 instance variables
     String instrument;
     int money;
     int mana; //currently has
 
     //2 constructors
-    public Bard(String instrument, int money, int mana) {
+    public Bard(String name, int health, String instrument, int money, int mana) {
+        super(name, health);
         this.instrument = instrument;
         this.money = money;
         this.mana = mana;
@@ -41,7 +42,7 @@ public class Bard {
     public boolean canPlay(int mana, Bard user) {
 
         if(mana >= 50) {
-            user.setInstrument("yes");
+            user.setInstrument("Broken");
             return true;
         }
         else {
