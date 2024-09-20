@@ -5,6 +5,10 @@ public class Bard extends Humanoid {
     int mana; //currently has
 
     //2 constructors
+    Bard() {
+        super();
+        System.out.println("Created new Bard.");
+    }
     public Bard(String name, int health, String instrument, int money, int mana) {
         super(name, health);
         this.instrument = instrument;
@@ -50,10 +54,19 @@ public class Bard extends Humanoid {
         }
     }
 
+    public boolean canBuy(int money, int price) {
+        if(money>= price) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     //5 toString
      @Override
      public String toString() {
-        String output= "instrument: " + instrument + "\nmoney: " + money + "\nmana: " + mana;
+        String output= "instrument: " + instrument + "\nmoney: " + money + "\nmana: " + mana + "\n";
         return output;
     }
 }

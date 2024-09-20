@@ -57,9 +57,18 @@ public class Wizard extends Humanoid {
         return cast;
     }
 
+    public boolean canBuy(int money, int price) {
+        if(money>= price) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     @Override
     public String toString() {
-        String output= "wand: " + wand + "\nmoney: " + money + "\nmana: " + mana;
+        String output= "wand: " + wand + "\nmoney: " + money + "\nmana: " + mana + "\n";
         return output;
     }
 }

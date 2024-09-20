@@ -5,6 +5,11 @@ public class Orc extends Humanoid {
 
     int strength;
 
+    Orc() {
+        super();
+        System.out.println("Created new Orc.");
+    }
+
     public Orc(String name, int health, String club, int money, int strength)  {
         super(name, health);
         this.club = club;
@@ -47,6 +52,15 @@ public class Orc extends Humanoid {
         }
 
         return attack;
+    }
+
+    public boolean canBuy(int money, int price) {
+        if(money>= price) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     @Override

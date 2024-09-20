@@ -21,4 +21,9 @@ public class Humanoid {
     public int getHealth() {
         return this.health;
     }
+
+    public String toString() {
+        String output= "name: " + name + "\nhealth: " + health;
+        return output;
+    }
 }

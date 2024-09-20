@@ -28,8 +28,7 @@ public class Main {
         Characters.add(JAWN1);
         Characters.add(JAWN2);
 
-            System.out.println("Characters: " + Characters.toString());
-
+        System.out.println("Characters: " + Characters.toString());
 
         System.out.println("Lets see skilled Bard go crazy.");
         currentFocus = skilledBard.getName();
@@ -41,5 +40,13 @@ public class Main {
         System.out.println("New health: " + saltine.getHealth());
         Staff.bigBrain(jonjon.getStaff());
 
+        System.out.println(jimothy.toString());
+        System.out.println("Jimothy can cast: " + jimothy.canCast(jimothy.mana));
+        System.out.println("JonJon can cast: " + jonjon.canCast(jonjon.mana));
+
+        System.out.println("Jonny Jackson can attack: " + JAWN1.canAttack(JAWN1.strength));
+        System.out.println("Jonny Jackson can buy a candy bar: " + JAWN1.canBuy(JAWN1.money, 40));
+        System.out.println("Jonny Jackson can buy a candy bar: " + JAWN1.canBuy(jonjon.money, 40));
+        System.out.println("Jonny Jackson can buy a candy bar: " + JAWN1.canBuy(saltine.money, 40));
     }
 }

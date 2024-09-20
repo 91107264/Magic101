@@ -7,6 +7,11 @@ public class Staff {
 
     int max;
 
+    Staff() {
+        super();
+        System.out.println("Created new Staff.");
+    }
+
     public Staff(String brand, int power, int min, int max) {
         this.max = max;
         this.brand=brand;
@@ -55,6 +60,15 @@ public class Staff {
         }
     }
 
+    public static void powerLevel(Staff staff) {
+        if(staff.power >= 150) {
+            System.out.println("Power level 2!");
+        }
+        else {
+            System.out.println("Power level 1...");
+        }
+    }
+
     @Override
     public String toString() {
         return "Staff{" +
@@ -62,6 +76,6 @@ public class Staff {
                 ", power=" + power +
                 ", min=" + min +
                 ", max=" + max +
-                '}';
+                '}' + "\n";
     }
 }
